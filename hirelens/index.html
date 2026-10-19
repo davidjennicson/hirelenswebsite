@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireLens | AI-Powered Smart Talent & Recruitment Intelligence</title>
+  <meta name="description" content="Accelerate your hiring pipeline with AI video interviews, automated resume parsing, and unbiased candidate scorecards.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" id="brand-logo">
+        <span class="logo-symbol">✦</span>
+        <span class="logo-name">Hire<span class="text-gradient">Lens</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features" class="nav-item">Platform</a>
+        <a href="#pipeline" class="nav-item">Candidate View</a>
+        <a href="#screening" class="nav-item">AI Screening</a>
+        <a href="#pricing" class="nav-item">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" onclick="openLensModal('signin')">Sign In</button>
+        <button class="btn btn-primary" onclick="openLensModal('demo')">Book 15-Min Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-sphere"></div>
+    <div class="container hero-inner">
+      <div class="hero-tag">
+        <span class="sparkle">✨</span> Next-Gen Talent Intelligence
+      </div>
+      <h1 class="hero-heading">
+        Screen 1,000 resumes in seconds. <br>
+        <span class="text-gradient">Interview the top 1% effortlessly.</span>
+      </h1>
+      <p class="hero-subtext">
+        HireLens combines generative video analysis, unbiased competency parsing, and real-time coding benchmark telemetry to help engineering & business teams hire 4x faster.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary btn-lg" onclick="openLensModal('demo')">Start 14-Day Free Trial</button>
+        <a href="#pipeline" class="btn btn-secondary btn-lg">Explore Live Pipeline Dashboard →</a>
+      </div>
+      
+      <!-- Interactive Pipeline Preview Card -->
+      <div class="hero-dashboard-preview" id="pipeline">
+        <div class="dash-top-bar">
+          <div class="dash-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="dash-title">Role: Senior Full Stack Engineer (Remote) • 48 Applicants Analyzed</span>
+          <span class="dash-badge">Active AI Filter</span>
+        </div>
+
+        <div class="dash-content">
+          <div class="candidate-table-header">
+            <span>Candidate</span>
+            <span>Skill Match</span>
+            <span>AI Video Score</span>
+            <span>Years Exp.</span>
+            <span>Recommendation</span>
+            <span>Action</span>
+          </div>
+
+          <div class="candidate-row">
+            <div class="c-info">
+              <div class="c-avatar bg-violet">AK</div>
+              <div>
+                <strong>Aarav Kapoor</strong>
+                <p>Ex-Stripe • React, Node, System Design</p>
+              </div>
+            </div>
+            <div><span class="score-pill score-high">98% Match</span></div>
+            <div>
+              <div class="progress-bar-wrap">
+                <div class="progress-fill" style="width: 95%;"></div>
+              </div>
+              <span class="score-sub">9.5/10 (High Confidence)</span>
+            </div>
+            <div class="c-exp">6.5 yrs</div>
+            <div><span class="status-badge fast-track">⚡ Fast-Track to Final</span></div>
+            <div><button class="btn-sm btn-outline-cyan" onclick="openScorecard('Aarav Kapoor', 98, 'React, Distributed Systems, Next.js', 'Exceptional depth in architecture, clean async pattern explanation, fluent communicator.')">View Scorecard</button></div>
+          </div>
+
+          <div class="candidate-row">
+            <div class="c-info">
+              <div class="c-avatar bg-cyan">SM</div>
+              <div>
+                <strong>Sara Miller</strong>
+                <p>Fintech SaaS • Python, Go, Kubernetes</p>
+              </div>
+            </div>
+            <div><span class="score-pill score-high">92% Match</span></div>
+            <div>
+              <div class="progress-bar-wrap">
+                <div class="progress-fill" style="width: 88%;"></div>
+              </div>
+              <span class="score-sub">8.8/10 (Strong Fit)</span>
+            </div>
+            <div class="c-exp">5.0 yrs</div>
+            <div><span class="status-badge interview">Technical Round</span></div>
+            <div><button class="btn-sm btn-outline-cyan" onclick="openScorecard('Sara Miller', 92, 'Go, Kubernetes, Kafka', 'Strong microservices knowledge, proactive problem-solving, confident async video responses.')">View Scorecard</button></div>
+          </div>
+
+          <div class="candidate-row">
+            <div class="c-info">
+              <div class="c-avatar bg-pink">DT</div>
+              <div>
+                <strong>David Tang</strong>
+                <p>Enterprise Cloud • Java, AWS, Spring</p>
+              </div>
+            </div>
+            <div><span class="score-pill score-med">84% Match</span></div>
+            <div>
+              <div class="progress-bar-wrap">
+                <div class="progress-fill" style="width: 82%;"></div>
+              </div>
+              <span class="score-sub">8.2/10 (Review)</span>
+            </div>
+            <div class="c-exp">4.2 yrs</div>
+            <div><span class="status-badge review">Under Review</span></div>
+            <div><button class="btn-sm btn-outline-cyan" onclick="openScorecard('David Tang', 84, 'Java, AWS, SQL', 'Solid technical fundamentals, could expand on container orchestration scalability.')">View Scorecard</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="pill-badge">Precision Hiring Features</span>
+        <h2>Built for Talent Acquisition Teams that Move Fast</h2>
+        <p>Cut screening time from 3 weeks to 48 hours without compromising candidate quality.</p>
+      </div>
+
+      <div class="feature-cards-grid">
+        <div class="feat-card">
+          <div class="feat-icon">🎯</div>
+          <h3>Deep Semantic Resume Parsing</h3>
+          <p>Ignore keyword-stuffing hacks. HireLens maps project impact, complexity, and skill adjacency with vector embedding models.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🎥</div>
+          <h3>Automated Asynchronous Video Auditions</h3>
+          <p>Let candidates answer role-tailored prompt questions on their schedule with AI transcription and emotion-neutral competency scoring.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🛡️</div>
+          <h3>Unbiased Blind Evaluation</h3>
+          <p>Mask demographic identifiers during initial rounds to guarantee a diverse, meritocratic, and compliance-ready pipeline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Screening Simulator -->
+  <section class="screening-section" id="screening">
+    <div class="container">
+      <div class="simulator-box">
+        <div class="sim-left">
+          <span class="pill-badge">Live Interactive Demo</span>
+          <h2>Test the HireLens AI Resume Scanner</h2>
+          <p>Select a candidate profile or type custom criteria to see how HireLens grades candidate alignment and flags strengths.</p>
+          
+          <div class="sim-controls">
+            <label>Select Sample Profile:</label>
+            <select id="sim-select" onchange="runSimulation()">
+              <option value="profile1">Senior Frontend Engineer (React/TypeScript)</option>
+              <option value="profile2">Data Scientist / ML Engineer (Python/PyTorch)</option>
+              <option value="profile3">Product Manager (B2B SaaS / Growth)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sim-right" id="sim-output">
+          <!-- Dynamic Scanner Output -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="pill-badge">Transparent Plans</span>
+        <h2>Scale Your Hiring Effortlessly</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-header">
+            <h3>Startup</h3>
+            <p>For growing teams hiring up to 5 roles/mo.</p>
+            <div class="price-amount">$149 <span>/ month</span></div>
+          </div>
+          <ul class="price-features">
+            <li>✓ Up to 5 Active Job Listings</li>
+            <li>✓ 300 AI Resume Scans / mo</li>
+            <li>✓ Automated Async Video Screenings</li>
+            <li>✓ ATS Integrations (Greenhouse, Lever)</li>
+          </ul>
+          <button class="btn btn-outline-cyan" onclick="openLensModal('demo')">Get Started</button>
+        </div>
+
+        <div class="price-card featured">
+          <div class="featured-tag">Most Popular</div>
+          <div class="price-header">
+            <h3>Scale</h3>
+            <p>For high-growth scaleups and tech teams.</p>
+            <div class="price-amount">$399 <span>/ month</span></div>
+          </div>
+          <ul class="price-features">
+            <li>✓ Unlimited Active Job Listings</li>
+            <li>✓ 2,500 AI Resume Scans / mo</li>
+            <li>✓ Custom Video Scoring Rubrics</li>
+            <li>✓ Bias-Masking & Blind Reviews</li>
+            <li>✓ Dedicated Success Manager</li>
+          </ul>
+          <button class="btn btn-primary" onclick="openLensModal('demo')">Start Free 14-Day Trial</button>
+        </div>
+
+        <div class="price-card">
+          <div class="price-header">
+            <h3>Enterprise</h3>
+            <p>For multi-national enterprises & agencies.</p>
+            <div class="price-amount">Custom</div>
+          </div>
+          <ul class="price-features">
+            <li>✓ Custom Model Fine-Tuning</li>
+            <li>✓ SOC-2 Type II & GDPR Compliant</li>
+            <li>✓ Custom SSO / SAML & SLA</li>
+            <li>✓ Unlimited Seats & Candidates</li>
+          </ul>
+          <button class="btn btn-outline-cyan" onclick="openLensModal('demo')">Talk to Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="brand-logo">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-name">Hire<span class="text-gradient">Lens</span></span>
+        </div>
+        <p>AI-native candidate intelligence platform accelerating high-quality hiring decisions worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#pipeline">Smart Pipeline</a>
+        <a href="#screening">AI Video Auditions</a>
+        <a href="#features">Resume Parser</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Integrations</h4>
+        <a href="#">Workday</a>
+        <a href="#">Greenhouse</a>
+        <a href="#">Lever</a>
+        <a href="#">BambooHR</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">Security & Privacy</a>
+        <a href="#">Algorithmic Fairness</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 HireLens Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for Scorecard / Demo -->
+  <div class="modal-backdrop" id="lens-modal" onclick="closeLensModalOnBackdrop(event)">
+    <div class="lens-modal-card">
+      <button class="modal-close-btn" onclick="closeLensModal()">&times;</button>
+      <div id="lens-modal-body">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
